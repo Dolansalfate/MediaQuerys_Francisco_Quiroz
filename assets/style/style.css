@@ -1,0 +1,228 @@
+body {
+  background-color: aliceblue;
+  color: black;
+  font-family: serif;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.leftmenu {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(0, 67, 253);
+  color: aliceblue;
+}
+.header h1 {
+  font-size: 140%;
+  margin-left: 10%;
+}
+.header i {
+  font-size: 120%;
+}
+.imagenL {
+  margin-left: 5%;
+}
+.imagenR {
+  margin-right: 5%;
+}
+.linksMenu {
+  display: none;
+}
+.searchbar {
+  grid-area: searchbar;
+  display: flex;
+  flex-direction: column;
+  padding: 3%;
+  background-color: rgb(218, 213, 213);
+}
+.contenidosearch {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 100%;
+}
+.contenidosearch h1 {
+  font-size: 100%;
+}
+.contenidosearch select {
+  width: 70%;
+  font-size: 80%;
+}
+.grillaLg {
+  display: none;
+}
+.tarjetaSm {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  padding: 5%;
+  align-items: center;
+  justify-content: center;
+}
+.tarjetaSm button {
+  background-color: rgb(0, 59, 187);
+  color: aliceblue;
+  width: 40%;
+  border: solid 1px black;
+}
+.botonesPagina {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 5%;
+}
+.botonesPagina p {
+  padding: 2%;
+  border: 1px solid gray;
+}
+.main {
+  grid-area: main;
+}
+.grid-item {
+  display: flex;
+  flex-direction: column;
+
+  padding: 15%;
+}
+.grid-item img {
+  height: 70%;
+  width: 100%;
+}
+.footer {
+  grid-area: footer;
+  margin-top: 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(4, 0, 253);
+  color: aliceblue;
+}
+
+.fila1footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 2%;
+}
+.fila1footer i {
+  margin-right: 3%;
+  font-size: 120%;
+}
+.fila2footer h1 {
+  font-size: 100%;
+  margin-left: 28%;
+}
+.grid-box {
+  border: 1px solid;
+}
+
+.grid-boxes {
+  display: grid;
+  grid-template-areas:
+    "header   header  header  header"
+    "searchbar    searchbar   searchbar   searchbar"
+    "main  main    main    main"
+    "footer  footer  footer  footer";
+  grid-template-rows: 1fr 1fr 3fr 1fr;
+  min-height: 99vh;
+  max-height: 100vh;
+}
+@media (min-width: 576px) /* Large */ {
+  .grillaLg {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr;
+
+    /*  gap: 10px; */
+    column-gap: 10px;
+    row-gap: 20px;
+  }
+  .tarjetaSm {
+    display: none;
+  }
+  .botonesPagina {
+    display: none;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  .imagenR {
+    display: none;
+  }
+  .linksMenu {
+    display: flex;
+    margin-top: 5%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .leftmenu {
+    padding: 1%;
+  }
+  .tarjetaLg {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    padding: 5%;
+    align-items: center;
+    justify-content: center;
+  }
+  .tarjetaLg button {
+    background-color: rgb(0, 59, 187);
+    color: aliceblue;
+    width: 80%;
+    border: solid 1px black;
+  }
+
+  .searchbar {
+    grid-area: searchbar;
+    display: flex;
+    flex-direction: column;
+    padding: 3%;
+    background-color: rgb(218, 213, 213);
+  }
+  .contenidosearch {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 120%;
+  }
+  .contenidosearch h1 {
+    font-size: 100%;
+  }
+  .contenidosearch select {
+    width: 70%;
+    font-size: 80%;
+  }
+  .grid-boxes {
+    display: grid;
+    grid-template-areas:
+      "header  searchbar searchbar searchbar  searchbar  searchbar"
+      "header main main main   main   main"
+      "header main main main    main    main"
+      "footer main main main  main  main";
+    grid-template-rows: auto auto auto auto;
+
+    min-height: 99vh;
+    max-height: 100vh;
+  }
+  .grid-item {
+    padding: 3%;
+  }
+}
